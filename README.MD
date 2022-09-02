@@ -9,6 +9,7 @@ This is a custom admin template.
 - Redux Toolkit
 - Axios
 - Typescript
+- React Toastify
 
 ## Installation
 
@@ -33,3 +34,33 @@ CLIENT_URL=http://localhost:3000
 ```
 
 Optionally you can change the variable to suit your needs
+
+## Features
+- Popup notification. Which involves any of the following:
+    - Antd Notification
+    - MUI Notification
+    - React Toastify
+  The notification can be dispatched using the following:
+  Example.
+  ```bash
+    dispatch(
+        showNotification({
+        type: 'success',
+        message: 'Success',
+        description: 'This is a success message',
+        })
+    );
+    ```
+    A notification may contain the following data:
+    ```bash
+    INotificationState {
+        message?: string
+        type: "info" | "success" | "error" | "warning" | TypeOptions
+        theme?: 'light' | 'dark'
+        position?: 'top-right'
+        autoClose?: number
+        hideProgressBar?: boolean
+        component?: 'antd' | 'react-toastify'
+        description?: string
+    }
+    ```

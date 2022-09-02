@@ -30,6 +30,6 @@ export interface INotificationState {
   position?: 'top-right'
   autoClose?: number
   hideProgressBar?: boolean
-  component?: 'antd' | 'react-toastify'
+  component?: 'antd' | 'react-toastify' | 'mui'
   description?: string
 }
