@@ -1,6 +1,6 @@
 {
   "name": "cra-template-boanergests",
-  "version": "0.6.0",
+  "version": "0.4.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/Boanerges1996/admin-template-cra.git"
@@ -97,8 +97,5 @@
   "engines": {
     "node": ">=10",
     "npm": ">=6"
-  },
-  "contributors": [
-    "Samson Kwaku Nkrumah (https://boanerges.me)"
-  ]
+  }
 }
