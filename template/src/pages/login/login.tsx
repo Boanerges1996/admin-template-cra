@@ -3,6 +3,7 @@ import { Row, Col, Button, Form, Typography, Input, Checkbox } from 'antd'
 import { useDispatch, useSelector } from 'react-redux'
 import { Navigate } from 'react-router-dom'
 import PhubieLogo from '../../assets/images/logoB.png'
+import { showPopupNotificationAction } from '../../store/reducers'
 // import { loginLoadingAdminSelector } from '../redux/selectors'
 // import { loginActionThunk } from '../redux/thunks'
 
@@ -162,6 +163,13 @@ export default function Login(props) {
                   style={{ width: '100%' }}
                   htmlType="submit"
                   // loading={loading}
+                  onClick={()=>{
+          
+                    dispatch(showPopupNotificationAction({
+                      message:"Hi",
+                      type:'info'
+                    }))
+                  }}
                 >
                   Login
                 </Button>

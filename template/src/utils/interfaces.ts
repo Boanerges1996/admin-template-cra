@@ -1,3 +1,5 @@
+import { TypeOptions } from "react-toastify"
+
 export interface IAdminModel {
   name: string
   firstname: string
@@ -19,4 +21,15 @@ export interface IDocsCallout {
   content: string
   href: string
   name: string
+}
+
+export interface INotificationState {
+  message?: string
+  type: "info" | "success" | "error" | "warning" | TypeOptions
+  theme?: 'light' | 'dark'
+  position?: 'top-right'
+  autoClose?: number
+  hideProgressBar?: boolean
+  component?: 'antd' | 'react-toastify'
+  description?: string
 }

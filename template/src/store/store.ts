@@ -1,6 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit'
 import adminReducer from './reducers/admin'
 import sidebarReducer from './reducers/sidebar'
+import popUpnotificationReducer from './reducers/popUpNotifications'
 import { Store, Action } from 'redux'
 
 const localStorageMiddleware = (store) => (next: any) => (action: any) => {
@@ -32,6 +33,7 @@ export const store = configureStore({
   reducer: {
     admin: adminReducer,
     sidebar: sidebarReducer,
+    notifications: popUpnotificationReducer,
   },
   devTools: true,
   preloadedState: rehydrateState(),
